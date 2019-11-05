@@ -1,16 +1,36 @@
 package kosta.mvc.model.dao;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 import kosta.mvc.model.dto.CommentDTO;
+import kosta.mvc.model.util.DbUtil;
 
 public class CommentDAOImpl implements CommentDAO{
 	
 	@Override
 	public List<CommentDTO> selectAll() throws SQLException {
-		// TODO Auto-generated method stub
-		return null;
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		List<CommentDTO> list = new ArrayList<CommentDTO>();
+		String sql = "select id,content,regdate from COMMENTS";
+		try {
+			conn = DbUtil.getConnection();
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			while(rs.next()) {
+				CommentDTO dto = new CommentDTO(rs.getString(1), rs.getString(2), rs.getString(3));
+				list.add(dto);
+			}
+		}finally {
+			DbUtil.dbClose(conn, ps, rs);
+		}
+		return list;
 	}
 	
 	@Override
