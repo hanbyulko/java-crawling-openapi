@@ -20,7 +20,7 @@ public class DustParser {
 		BufferedReader bf = null;
 		try {
 			String urlStr = "http://openAPI.seoul.go.kr:8088/" + DUST_KEY + "/json/ListAirQualityByDistrictService/1/5/"
-					+ location + "+/";
+					+ location;
 			URL url = new URL(urlStr);
 
 			String line = "";
