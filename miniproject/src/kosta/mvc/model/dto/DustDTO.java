@@ -85,13 +85,7 @@ public class DustDTO {
 	public void setPm25(String pm25) {
 		this.pm25 = pm25;
 	}
-	@Override
-	public String toString() {
-		return "DustDTO [msrDate=" + msrDate + ", msRadmCode=" + msRadmCode + ", msrStenName=" + msrStenName
-				+ ", maxIndex=" + maxIndex + ", grade=" + grade + ", pollutant=" + pollutant + ", nitrogen=" + nitrogen
-				+ ", ozone=" + ozone + ", carbon=" + carbon + ", sulfurous=" + sulfurous + ", pm10=" + pm10 + ", pm25="
-				+ pm25 + "]";
-	}
+	
 	public DustDTO(String msrDate, String msRadmCode, String msrStenName, String maxIndex, String grade,
 			String pollutant, String nitrogen, String ozone, String carbon, String sulfurous, String pm10,
 			String pm25) {
@@ -109,6 +103,15 @@ public class DustDTO {
 		this.pm10 = pm10;
 		this.pm25 = pm25;
 	}
+	@Override
+	public String toString() {
+		return "ÇöÀç msrDate=" + msrDate + ", msRadmCode=" + msRadmCode + ", msrStenName=" + msrStenName
+				+ ", maxIndex=" + maxIndex + ", grade=" + grade + ", pollutant=" + pollutant + ", nitrogen=" + nitrogen
+				+ ", ozone=" + ozone + ", carbon=" + carbon + ", sulfurous=" + sulfurous + ", pm10=" + pm10 + ", pm25="
+				+ pm25 + "]";
+	}
+	
+	
 	
 	
 }

@@ -10,10 +10,6 @@ public class SuccessView {
 	public SuccessView() {
 	}
 	
-	public static void printAll(Map<List<DustDTO>, List<WeatherDTO>> map) {
-		System.out.println(map);
-	}
-	
 	public static void selectPrint(Object obj) {
 		System.out.println(obj);
 	}

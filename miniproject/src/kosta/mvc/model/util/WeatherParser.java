@@ -70,6 +70,7 @@ public class WeatherParser {
 				weatherList.add(new WeatherDTO(SAWS_OBS_TM, STN_NM, SAWS_TA_AVG, SAWS_TA_MIN, SAWS_TA_MAX, SAWS_HD_AVG, SAWS_HD_MIN, SAWS_HD_MAX,
 						SAWS_WS_AVG, SAWS_WS_MAX, SAWS_RN_SUM));
 			}
+			return weatherList;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}finally {
@@ -79,11 +80,7 @@ public class WeatherParser {
 				e.printStackTrace();
 			}
 		}
-		return weatherList;
+		return null;
 	}
 	
-	public static void main(String[] args) {
-		
-		System.out.println(jsonParser("20180317"));
-	}
 }

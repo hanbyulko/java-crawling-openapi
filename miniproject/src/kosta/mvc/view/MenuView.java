@@ -15,22 +15,25 @@ public class MenuView {
 	public static void menuPrint() {
 		while (true) {
 			System.out.println("-----메뉴 선택-----");
-			System.out.println("1. 지역 검색     2. 종료");
+			System.out.println("1. 실시간 날씨 정보     2. 실시간 대기환경 정보     3. 종료");
 			String select = sc.next();
-
+			String location = null;
+			
 			switch (select) {
 			case "1":
 				System.out.println("지역을 입력하세요");
-				String location = sc.next();
+				location = sc.next();
+				WeatherController.weatherSearch(location, new SimpleDateFormat("yyyyMMdd", Locale.KOREA).format(new Date()));
+			case "2":
+				System.out.println("지역을 입력하세요");
+				location = sc.next();
 				WeatherController.dustSearch(location);
-				WeatherController.weatherSearch(location);
-				commentMenu(location);
 				break;
 			case "3":
 				sc.close();
 				System.exit(0);
 			}
-			
+			commentMenu(location);
 		}
 	}
 	
@@ -42,29 +45,20 @@ public class MenuView {
 			select = sc.next();
 			String id;
 			String content;
-			SimpleDateFormat formatter;
-			Date currentTime;
-			String dTime;
 			switch (select) {
 			case "1":
 				System.out.println("아이디 입력");
 				id = sc.next();
 				System.out.println("내용 입력");
 				content = sc.next();
-				formatter = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREA);
-				currentTime = new Date();
-				dTime = formatter.format(currentTime);
-				CommentController.insert(new CommentDTO(id, content, dTime));
+				CommentController.insert(new CommentDTO(id, content, new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREA).format(new Date())));
 				break;
 			case "2":
 				System.out.println("아이디 입력");
 				id = sc.next();
 				System.out.println("내용 입력");
 				content = sc.next();
-				formatter = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREA);
-				currentTime = new Date();
-				dTime = formatter.format(currentTime);
-				CommentController.update(new CommentDTO(id, content, dTime));
+				CommentController.update(new CommentDTO(id, content, new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREA).format(new Date())));
 				break;
 			case "3":
 				System.out.println("아이디 입력");
