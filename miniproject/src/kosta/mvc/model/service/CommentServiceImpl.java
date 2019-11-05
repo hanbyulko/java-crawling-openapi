@@ -28,15 +28,20 @@ public class CommentServiceImpl implements CommentService {
 	}
 
 	@Override
-	public void delete(int no) throws Exception {
-		// TODO Auto-generated method stub
+	public void delete(String id) throws Exception {
+		int result = dao.delete(id);
+		if(result == 0) {
+			throw new SQLException("삭제실패");
+		}
 		
 	}
 
 	@Override
 	public void update(CommentDTO c) throws SQLException {
-		// TODO Auto-generated method stub
-		
+		int result = dao.update(c);
+		if(result == 0) {
+			throw new SQLException("수정실패");
+		}
 	}
 
 	

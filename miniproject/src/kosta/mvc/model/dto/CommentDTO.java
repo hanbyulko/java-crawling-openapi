@@ -5,9 +5,9 @@ public class CommentDTO {
 	private String content;
 	private String location;
 	private String date;
-	public CommentDTO(String writer, String content,String location, String date) {
+	public CommentDTO(String id, String content,String location, String date) {
 		super();
-		this.id = writer;
+		this.id = id;
 		this.content = content;
 		this.location = location;
 		this.date = date;
@@ -15,11 +15,11 @@ public class CommentDTO {
 	public CommentDTO() {
 		super();
 	}
-	public String getWriter() {
+	public String getId() {
 		return id;
 	}
-	public void setWriter(String writer) {
-		this.id = writer;
+	public void setId(String id) {
+		this.id = id;
 	}
 	public String getContent() {
 		return content;

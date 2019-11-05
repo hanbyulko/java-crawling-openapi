@@ -13,6 +13,6 @@ public interface CommentDAO {
 	
 	int update(CommentDTO c)throws SQLException;
 	
-	int delete(CommentDTO c) throws SQLException;
+	int delete(String id) throws SQLException;
 
 }
