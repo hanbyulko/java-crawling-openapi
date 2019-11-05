@@ -1,10 +1,10 @@
 package kosta.mvc.model.util;
 
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.json.simple.JSONArray;
@@ -17,6 +17,7 @@ public class DustParser {
 	private static final String DUST_KEY = "5574536c6a68616e38306d6d726e53";
 
 	public static List<DustDTO> jsonParser(String location) {
+		List<DustDTO> dustList = new ArrayList<>();
 		BufferedReader bf = null;
 		try {
 			String urlStr = "http://openAPI.seoul.go.kr:8088/" + DUST_KEY + "/json/ListAirQualityByDistrictService/1/5/"
@@ -51,17 +52,16 @@ public class DustParser {
 				String msrAdmCode = (String) list.get("MSRADMCODE");
 				String msrStenName = (String) list.get("MSRSTENNAME");
 				String maxIndex = (String) list.get("MAXINDEX");
-				String grade = (String)list.get("GRADE");
+				String grade = (String) list.get("GRADE");
 				String pollutant = (String) list.get("POLLUTANT");
 				String nitrogen = (String) list.get("NITROGEN");
-				String ozone =  (String) list.get("OZONE");
-				String carbon =  (String)  list.get("CARBON");
-				String sulfurous = (String)  list.get("SULFUROUS");
+				String ozone = (String) list.get("OZONE");
+				String carbon = (String) list.get("CARBON");
+				String sulfurous = (String) list.get("SULFUROUS");
 				String pm10 = (String) list.get("PM10");
 				String pm25 = (String) list.get("PM25");
-//				return new DustDTO(msrDate, msrAdmCode, msrStenName, maxIndex, grade, pollutant, nitrogen, ozone,
-//						carbon, sulfurous, pm10, pm25);
-				
+				dustList.add(new DustDTO(msrDate, msrAdmCode, msrStenName, maxIndex, grade, pollutant, nitrogen, ozone,
+						carbon, sulfurous, pm10, pm25));
 			}
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
@@ -72,6 +72,6 @@ public class DustParser {
 				e.printStackTrace();
 			}
 		}
-		return null;
+		return dustList;
 	}
 }
