@@ -28,7 +28,7 @@ public class CommentServiceImpl implements CommentService {
 	}
 
 	@Override
-	public void delete(String id) throws Exception {
+	public void delete(String id) throws SQLException {
 		int result = dao.delete(id);
 		if(result == 0) {
 			throw new SQLException("삭제실패");
