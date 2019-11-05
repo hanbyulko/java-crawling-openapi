@@ -1,12 +1,12 @@
 package kosta.mvc.model.dto;
 
 public class CommentDTO {
-	private String writer;
+	private String id;
 	private String content;
 	private String date;
 	public CommentDTO(String writer, String content, String date) {
 		super();
-		this.writer = writer;
+		this.id = writer;
 		this.content = content;
 		this.date = date;
 	}
@@ -14,10 +14,10 @@ public class CommentDTO {
 		super();
 	}
 	public String getWriter() {
-		return writer;
+		return id;
 	}
 	public void setWriter(String writer) {
-		this.writer = writer;
+		this.id = writer;
 	}
 	public String getContent() {
 		return content;
@@ -33,7 +33,7 @@ public class CommentDTO {
 	}
 	@Override
 	public String toString() {
-		return "CommentDTO [writer=" + writer + ", content=" + content + ", date=" + date + "]";
+		return "CommentDTO [writer=" + id + ", content=" + content + ", date=" + date + "]";
 	}
 	
 	
