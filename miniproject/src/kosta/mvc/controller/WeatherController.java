@@ -2,6 +2,7 @@ package kosta.mvc.controller;
 
 import kosta.mvc.model.service.Weather;
 import kosta.mvc.model.service.WeatherServiceImpl;
+import kosta.mvc.model.util.LocationCode;
 import kosta.mvc.view.FailView;
 import kosta.mvc.view.SuccessView;
 
@@ -18,7 +19,7 @@ public class WeatherController {
 
 	public static void dustSearch(String location) {
 		try {
-			SuccessView.selectPrint(service.dustSearch(location));
+			SuccessView.selectPrint(service.dustSearch(LocationCode.getCode(location)));
 		} catch (Exception e) {
 			FailView.errorMessage(e.getMessage());
 		}
@@ -26,7 +27,7 @@ public class WeatherController {
 	
 	public static void weatherSearch(String location) {
 		try {
-			SuccessView.selectPrint(service.weatherSearch(location));
+			SuccessView.selectPrint(service.weatherSearch(LocationCode.getCode(location)));
 		} catch (Exception e) {
 			FailView.errorMessage(e.getMessage());
 		}
