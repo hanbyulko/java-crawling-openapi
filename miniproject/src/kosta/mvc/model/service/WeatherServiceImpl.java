@@ -11,12 +11,6 @@ import kosta.mvc.model.util.WeatherParser;
 public class WeatherServiceImpl implements Weather {
 	
 	@Override
-	public Map<List<DustDTO>, List<WeatherDTO>> searchAll() throws Exception {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
 	public List<DustDTO> dustSearch(String location) throws Exception{
 		return DustParser.jsonParser(location);
 	}
