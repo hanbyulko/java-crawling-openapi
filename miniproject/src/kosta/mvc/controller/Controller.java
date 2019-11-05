@@ -1,12 +1,12 @@
 package kosta.mvc.controller;
 
-import kosta.mvc.model.service.DustService;
-import kosta.mvc.model.service.DustServiceImpl;
+import kosta.mvc.model.service.Service;
+import kosta.mvc.model.service.ServiceImpl;
 import kosta.mvc.view.FailView;
 import kosta.mvc.view.SuccessView;
 
-public class DustController {
-	private static DustService service = new DustServiceImpl();
+public class Controller {
+	private static Service service = new ServiceImpl();
 
 	public static void searchAll() {
 		try {

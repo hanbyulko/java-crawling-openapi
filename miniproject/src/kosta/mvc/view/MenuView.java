@@ -2,7 +2,7 @@ package kosta.mvc.view;
 
 import java.util.Scanner;
 
-import kosta.mvc.controller.DustController;
+import kosta.mvc.controller.Controller;
 
 public class MenuView {
 	
@@ -15,11 +15,11 @@ public class MenuView {
 			
 			switch (select) {
 			case "1" : 
-				DustController.searchAll();
+				Controller.searchAll();
 				break;
 			case "2" :
 				System.out.println("지역을 입력하세요");
-				DustController.dustSearch(sc.next());
+				Controller.dustSearch(sc.next());
 				break;
 			case "3" :
 				sc.close();

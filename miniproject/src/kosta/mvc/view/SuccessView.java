@@ -6,7 +6,6 @@ import kosta.mvc.model.dto.DustDTO;
 
 public class SuccessView {
 	public SuccessView() {
-		
 	}
 	
 	public static void printAll(List<DustDTO> list) {

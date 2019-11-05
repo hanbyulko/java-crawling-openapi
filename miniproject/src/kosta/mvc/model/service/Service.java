@@ -5,7 +5,7 @@ import java.util.List;
 import kosta.mvc.model.dto.DustDTO;
 import kosta.mvc.model.dto.WeatherDTO;
 
-public interface DustService {
+public interface Service {
 
 	List<DustDTO> searchAll( ) throws Exception;
 
