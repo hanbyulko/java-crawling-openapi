@@ -11,8 +11,8 @@ public class CommentServiceImpl implements CommentService {
 	private static CommentDAO dao = new CommentDAOImpl();
 
 	@Override
-	public List<CommentDTO> selectAll() throws SQLException {
-		List<CommentDTO> list = dao.selectAll();
+	public List<CommentDTO> selectLocation(String location) throws SQLException {
+		List<CommentDTO> list = dao.selectLocation(location);
 		if(list==null || list.isEmpty()) {
 			throw new SQLException("검색된 댓글이 없습니다");
 		}

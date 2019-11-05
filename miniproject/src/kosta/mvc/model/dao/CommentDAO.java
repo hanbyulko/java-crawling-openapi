@@ -6,7 +6,6 @@ import java.util.List;
 import kosta.mvc.model.dto.CommentDTO;
 
 public interface CommentDAO {
-	List<CommentDTO> selectAll()throws SQLException;
 	//최근 댓글 5개만 리턴
 	List<CommentDTO> selectLocation(String location) throws SQLException;
 	

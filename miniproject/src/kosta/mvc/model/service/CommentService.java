@@ -7,7 +7,7 @@ import kosta.mvc.model.dto.CommentDTO;
 
 public interface CommentService {
 
-	List<CommentDTO> selectAll() throws SQLException;
+	List<CommentDTO> selectLocation(String location) throws SQLException;
 	//가장 최근에 등록된 5개만 보여주는걸로
 	void insert(CommentDTO c) throws SQLException;
 	void delete(int no) throws Exception;

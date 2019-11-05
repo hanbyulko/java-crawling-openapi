@@ -12,16 +12,18 @@ import kosta.mvc.model.util.DbUtil;
 
 public class CommentDAOImpl implements CommentDAO{
 	
+	
 	@Override
-	public List<CommentDTO> selectAll() throws SQLException {
+	public List<CommentDTO> selectLocation(String location) throws SQLException {
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;
 		List<CommentDTO> list = new ArrayList<CommentDTO>();
-		String sql = "select id,content,regdate from COMMENTS";
+		String sql = "select id,content,regdate from COMMENTS where location = ?";
 		try {
 			conn = DbUtil.getConnection();
 			ps = conn.prepareStatement(sql);
+			ps.setString(1, location);
 			rs = ps.executeQuery();
 			while(rs.next()) {
 				CommentDTO dto = new CommentDTO(rs.getString(1), rs.getString(2), rs.getString(3));
@@ -31,11 +33,6 @@ public class CommentDAOImpl implements CommentDAO{
 			DbUtil.dbClose(conn, ps, rs);
 		}
 		return list;
-	}
-	
-	@Override
-	public List<CommentDTO> selectLocation(String location) throws SQLException {
-		return null;
 	}
 
 	@Override

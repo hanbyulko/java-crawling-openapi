@@ -11,16 +11,14 @@ import kosta.mvc.view.SuccessView;
 public class CommentController {
 	static CommentServiceImpl service = new CommentServiceImpl();
 	
-	public static void selectAll() {
+
+	public static void selectLoction(String location) {
 		try {
-			List<CommentDTO> list = service.selectAll();
-			SuccessView.selectPrint(list);
+			List<CommentDTO> list = service.selectLocation(location);
+			SuccessView.selectAll(list);
 		} catch (SQLException e) {
 			FailView.errorMessage(e.getMessage());
 		}
-	}
-
-	public static void selectLoction(String location) {
 	}
 
 	public static void insert(CommentDTO c) {
