@@ -51,14 +51,14 @@ public class MenuView {
 				id = sc.next();
 				System.out.println("내용 입력");
 				content = sc.next();
-				CommentController.insert(new CommentDTO(id, content, new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREA).format(new Date())));
+				CommentController.insert(new CommentDTO(id, content, location, new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREA).format(new Date())));
 				break;
 			case "2":
 				System.out.println("아이디 입력");
 				id = sc.next();
 				System.out.println("내용 입력");
 				content = sc.next();
-				CommentController.update(new CommentDTO(id, content, new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREA).format(new Date())));
+				CommentController.update(new CommentDTO(id, content, location, new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREA).format(new Date())));
 				break;
 			case "3":
 				System.out.println("아이디 입력");
