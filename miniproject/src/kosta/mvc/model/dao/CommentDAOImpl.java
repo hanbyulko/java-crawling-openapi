@@ -12,6 +12,11 @@ public class CommentDAOImpl implements CommentDAO{
 		// TODO Auto-generated method stub
 		return null;
 	}
+	
+	@Override
+	public List<CommentDTO> selectLocation(String location) throws SQLException {
+		return null;
+	}
 
 	@Override
 	public int insert(CommentDTO c) throws SQLException {

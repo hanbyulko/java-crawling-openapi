@@ -1,8 +1,11 @@
 package kosta.mvc.model.service;
 
+import kosta.mvc.model.dao.CommentDAO;
+import kosta.mvc.model.dao.CommentDAOImpl;
 import kosta.mvc.model.dto.CommentDTO;
 
 public class CommentServiceImpl implements CommentService {
+	private static CommentDAO dao = new CommentDAOImpl();
 
 	@Override
 	public void selectAll() throws Exception {

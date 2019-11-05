@@ -1,19 +1,25 @@
 package kosta.mvc.controller;
 
+import kosta.mvc.model.dto.CommentDTO;
+
 public class CommentController {
-	public void selectAll() {
+	public static void selectAll() {
 
 	}
 
-	public void insert() {
+	public static void selectLoction(String location) {
+	}
+
+	public static void insert(CommentDTO c) {
 
 	}
 
-	public void update() {
+	public static void update(CommentDTO c) {
 
 	}
 
-	public void delete() {
+	public static void delete(String name) {
 
 	}
+
 }
