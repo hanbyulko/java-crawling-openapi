@@ -10,7 +10,7 @@ public class MenuView {
 		Scanner sc = new Scanner(System.in);
 		while(true) {
 			System.out.println("-----메뉴 선택-----");
-			System.out.println("1. 전체 검색    2. 지역 검색    3. 현재 위치 검색    3. 종료");
+			System.out.println("1. 전체 검색    2. 지역 검색     3. 종료");
 			String select = sc.next();
 			
 			switch (select) {
@@ -18,6 +18,8 @@ public class MenuView {
 				DustController.searchAll();
 				break;
 			case "2" :
+				System.out.println("지역을 입력하세요");
+				DustController.dustSearch(sc.next());
 				break;
 			case "3" :
 				sc.close();

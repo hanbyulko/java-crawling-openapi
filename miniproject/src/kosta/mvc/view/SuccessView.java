@@ -13,8 +13,8 @@ public class SuccessView {
 		System.out.println(list);
 	}
 	
-	public static void selectPrint(Object dust) {
-		System.out.println(dust);
+	public static void selectPrint(Object obj) {
+		System.out.println(obj);
 	}
 	
 	public static void messagePrint(String msg) {
