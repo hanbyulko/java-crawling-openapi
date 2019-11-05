@@ -3,22 +3,22 @@ package kosta.mvc.model.dto;
 public class WeatherDTO {
 	private String obsTm; //관측일자
 	private String nm;  //지점명 
-	private double taAvg; //평균기온
-	private double taMin; //최저기온
-	private double taMax; //최고기온
-	private double hdAvg; //평균습도
-	private double hdMin; //최저습도
-	private double hdMax; //최고습도
-	private double wsAvg; //평균풍속
-	private double wsMax; //최대풍속
-	private double rnSum; //강수량
+	private String taAvg; //평균기온
+	private String taMin; //최저기온
+	private String taMax; //최고기온
+	private String hdAvg; //평균습도
+	private String hdMin; //최저습도
+	private String hdMax; //최고습도
+	private String wsAvg; //평균풍속
+	private String wsMax; //최대풍속
+	private String rnSum; //강수량
 	
 	public WeatherDTO() {
 		
 	}
 
-	public WeatherDTO(String obsTm, String nm, double taAvg, double taMin, double taMax, double hdAvg, double hdMin,
-			double hdMax, double wsAvg, double wsMax, double rnSum) {
+	public WeatherDTO(String obsTm, String nm, String taAvg, String taMin, String taMax, String hdAvg, String hdMin,
+			String hdMax, String wsAvg, String wsMax, String rnSum) {
 		super();
 		this.obsTm = obsTm;
 		this.nm = nm;
@@ -51,75 +51,75 @@ public class WeatherDTO {
 		this.nm = nm;
 	}
 
-	public double getTaAvg() {
+	public String getTaAvg() {
 		return taAvg;
 	}
 
-	public void setTaAvg(double taAvg) {
+	public void setTaAvg(String taAvg) {
 		this.taAvg = taAvg;
 	}
 
-	public double getTaMin() {
+	public String getTaMin() {
 		return taMin;
 	}
 
-	public void setTaMin(double taMin) {
+	public void setTaMin(String taMin) {
 		this.taMin = taMin;
 	}
 
-	public double getTaMax() {
+	public String getTaMax() {
 		return taMax;
 	}
 
-	public void setTaMax(double taMax) {
+	public void setTaMax(String taMax) {
 		this.taMax = taMax;
 	}
 
-	public double getHdAvg() {
+	public String getHdAvg() {
 		return hdAvg;
 	}
 
-	public void setHdAvg(double hdAvg) {
+	public void setHdAvg(String hdAvg) {
 		this.hdAvg = hdAvg;
 	}
 
-	public double getHdMin() {
+	public String getHdMin() {
 		return hdMin;
 	}
 
-	public void setHdMin(double hdMin) {
+	public void setHdMin(String hdMin) {
 		this.hdMin = hdMin;
 	}
 
-	public double getHdMax() {
+	public String getHdMax() {
 		return hdMax;
 	}
 
-	public void setHdMax(double hdMax) {
+	public void setHdMax(String hdMax) {
 		this.hdMax = hdMax;
 	}
 
-	public double getWsAvg() {
+	public String getWsAvg() {
 		return wsAvg;
 	}
 
-	public void setWsAvg(double wsAvg) {
+	public void setWsAvg(String wsAvg) {
 		this.wsAvg = wsAvg;
 	}
 
-	public double getWsMax() {
+	public String getWsMax() {
 		return wsMax;
 	}
 
-	public void setWsMax(double wsMax) {
+	public void setWsMax(String wsMax) {
 		this.wsMax = wsMax;
 	}
 
-	public double getRnSum() {
+	public String getRnSum() {
 		return rnSum;
 	}
 
-	public void setRnSum(double rnSum) {
+	public void setRnSum(String rnSum) {
 		this.rnSum = rnSum;
 	}
 
