@@ -20,8 +20,6 @@ public class DustParser {
 		List<DustDTO> dustList = new ArrayList<>();
 		BufferedReader bf = null;
 		try {
-			
-			
 			String urlStr = "http://openAPI.seoul.go.kr:8088/" + DUST_KEY + "/json/ListAirQualityByDistrictService/1/5/"
 					+ location;
 			URL url = new URL(urlStr);
@@ -50,7 +48,7 @@ public class DustParser {
 			// 필요한 데이터만 가져오려고합니다.
 			for (int i = 0; i < parse_item.size(); i++) {
 				list = (JSONObject) parse_item.get(i);
-				String msrDate = (String) list.get("MSRDATE");
+				String msrDate = (String) list.get("MSRDATE"); 
 				String msrAdmCode = (String) list.get("MSRADMCODE");
 				String msrStenName = (String) list.get("MSRSTENNAME");
 				String maxIndex = (String) list.get("MAXINDEX");
@@ -75,9 +73,5 @@ public class DustParser {
 			}
 		}
 		return dustList;
-	}
-	public static void main(String[] args) {
-		
-		System.out.println(jsonParser(""));
 	}
 }
