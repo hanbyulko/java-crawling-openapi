@@ -4,7 +4,6 @@ import kosta.mvc.model.dto.CommentDTO;
 
 public class CommentController {
 	public static void selectAll() {
-
 	}
 
 	public static void selectLoction(String location) {

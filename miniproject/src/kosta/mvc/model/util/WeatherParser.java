@@ -3,6 +3,7 @@ package kosta.mvc.model.util;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -13,7 +14,7 @@ import kosta.mvc.model.dto.WeatherDTO;
 public class WeatherParser {
 	private static final String WEATHER_KEY = "5479724c5068616e3738755144574b";
 
-	public static WeatherDTO jsonParser(String location) {
+	public static List<WeatherDTO> jsonParser(String location) {
 		try { /*
 				 * 요청정보입력 * 아래와 같은 정보들은 사용자 가이드를 확인하여 찾아주시면 됩니다. 위도 경도는 엑셀파일 안에 있습니다. *
 				 */

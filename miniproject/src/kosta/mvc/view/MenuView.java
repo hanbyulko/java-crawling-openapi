@@ -27,6 +27,7 @@ public class MenuView {
 				System.out.println("지역을 입력하세요");
 				String location = sc.next();
 				WeatherController.dustSearch(location);
+				WeatherController.weatherSearch(location);
 				CommentController.selectLoction(location);
 				break;
 			case "3":
