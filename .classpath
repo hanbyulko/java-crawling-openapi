@@ -2,5 +2,6 @@
 <classpath>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="miniproject/src"/>
+	<classpathentry kind="lib" path="C:/Edu/SW/json-simple-1.1.1.jar"/>
 	<classpathentry kind="output" path="miniproject/bin"/>
 </classpath>
