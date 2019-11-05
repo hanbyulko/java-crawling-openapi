@@ -29,6 +29,7 @@ public class DustParser {
 			while ((line = bf.readLine()) != null) {
 				result = result.concat(line); //
 			}
+			
 			JSONParser parser = new JSONParser();
 			JSONObject obj = (JSONObject) parser.parse(result);
 			JSONObject parse_response = (JSONObject) obj.get("ListAirQualityByDistrictService");
