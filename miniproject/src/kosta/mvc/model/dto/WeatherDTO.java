@@ -125,8 +125,21 @@ public class WeatherDTO {
 
 	@Override
 	public String toString() {
-		return "WeatherDTO [obsTm=" + obsTm + ", nm=" + nm + ", taAvg=" + taAvg + ", taMin=" + taMin + ", taMax="
-				+ taMax + ", hdAvg=" + hdAvg + ", hdMin=" + hdMin + ", hdMax=" + hdMax + ", wsAvg=" + wsAvg + ", wsMax="
-				+ wsMax + ", rnSum=" + rnSum + "]";
+		private String obsTm; //관측일자
+		private String nm;  //지점명 
+		private String taAvg; //평균기온
+		private String taMin; //최저기온
+		private String taMax; //최고기온
+		private String hdAvg; //평균습도
+		private String hdMin; //최저습도
+		private String hdMax; //최고습도
+		private String wsAvg; //평균풍속
+		private String wsMax; //최대풍속
+		private String rnSum; //강수량
+		
+		return obsTm.substring(0,4)+"년 "+obsTm.substring(4, 6)+"월 "+obsTm.substring(6,8)+"일 ["+ nm + "]의 날씨는 ["
+				+ grade + "]입니다\n" + "통합대기환경지수 :"+ maxIndex + "\n지수결정물질 :"+pollutant+
+				"\n이산화질소 :" + nitrogen +"\n오존 :"+ozone + "\n일산화탄소 :"+carbon + 
+				"\n아황산가스 :" + sulfurous + "\n미세먼지농도" + pm10 + "\n초미세먼지농도" +pm25;;
 	}
 }
