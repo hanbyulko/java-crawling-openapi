@@ -45,7 +45,5 @@ public class CommentDTO {
 	@Override
 	public String toString() {
 		return "CommentDTO [writer=" + id + ", content=" + content + ", date=" + date + "]";
-	}
-	
-	
+	}	
 }
