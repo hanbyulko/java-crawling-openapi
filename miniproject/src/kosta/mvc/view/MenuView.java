@@ -2,7 +2,7 @@ package kosta.mvc.view;
 
 import java.util.Scanner;
 
-import kosta.mvc.controller.Controller;
+import kosta.mvc.controller.WeatherController;
 
 public class MenuView {
 	
@@ -15,11 +15,11 @@ public class MenuView {
 			
 			switch (select) {
 			case "1" : 
-				Controller.searchAll();
+				WeatherController.searchAll();
 				break;
 			case "2" :
 				System.out.println("지역을 입력하세요");
-				Controller.dustSearch(sc.next());
+				WeatherController.dustSearch(sc.next());
 				break;
 			case "3" :
 				sc.close();

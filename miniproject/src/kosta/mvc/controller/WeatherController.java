@@ -1,12 +1,12 @@
 package kosta.mvc.controller;
 
-import kosta.mvc.model.service.Service;
-import kosta.mvc.model.service.ServiceImpl;
+import kosta.mvc.model.service.Weather;
+import kosta.mvc.model.service.WeatherServiceImpl;
 import kosta.mvc.view.FailView;
 import kosta.mvc.view.SuccessView;
 
-public class Controller {
-	private static Service service = new ServiceImpl();
+public class WeatherController {
+	private static Weather service = new WeatherServiceImpl();
 
 	public static void searchAll() {
 		try {

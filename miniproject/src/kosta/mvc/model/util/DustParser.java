@@ -73,9 +73,4 @@ public class DustParser {
 		}
 		return null;
 	}
-
-	public static void main(String[] args) {
-		System.out.println(DustParser.jsonParser("111181"));
-	}
-
 }

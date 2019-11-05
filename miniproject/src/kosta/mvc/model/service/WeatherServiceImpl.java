@@ -7,7 +7,7 @@ import kosta.mvc.model.dto.WeatherDTO;
 import kosta.mvc.model.util.DustParser;
 import kosta.mvc.model.util.WeatherParser;
 
-public class ServiceImpl implements Service {
+public class WeatherServiceImpl implements Weather {
 	@Override
 	public List<DustDTO> searchAll() throws Exception{
 		List<DustDTO> list = null;
