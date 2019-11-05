@@ -24,19 +24,20 @@ public class MenuView {
 				String location = sc.next();
 				WeatherController.dustSearch(location);
 				WeatherController.weatherSearch(location);
-				CommentController.selectLoction(location);
+				commentMenu(location);
 				break;
 			case "3":
 				sc.close();
 				System.exit(0);
 			}
-			commentMenu();
+			
 		}
 	}
 	
-	public static void commentMenu() {
+	public static void commentMenu(String location) {
 		String select = null;
 		while (true) {
+			CommentController.selectLoction(location);
 			System.out.println("1. 댓글 작성  2. 댓글 수정   3. 댓글 삭제   4. 이전 메뉴로");
 			select = sc.next();
 			String id;

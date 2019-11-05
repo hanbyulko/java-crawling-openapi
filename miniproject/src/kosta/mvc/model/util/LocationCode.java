@@ -17,7 +17,6 @@ public class LocationCode {
 		// 2개의 ~.properties 파일 로딩
 		try {
 			proFile.load(new FileInputStream(new File("src/kosta/mvc/model/util/locationInfo.properties")));
-//			proFile.load(new FileInputStream(new File("src/kosta/mvc/model/util/board.properties")));
 
 			Class.forName(proFile.getProperty("driverName"));
 

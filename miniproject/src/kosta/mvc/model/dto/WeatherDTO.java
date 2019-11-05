@@ -129,8 +129,4 @@ public class WeatherDTO {
 				+ taMax + ", hdAvg=" + hdAvg + ", hdMin=" + hdMin + ", hdMax=" + hdMax + ", wsAvg=" + wsAvg + ", wsMax="
 				+ wsMax + ", rnSum=" + rnSum + "]";
 	}
-	
-	
-	
-
 }
