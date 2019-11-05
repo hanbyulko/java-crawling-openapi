@@ -20,4 +20,5 @@ public class WeatherServiceImpl implements Weather {
 		return WeatherParser.jsonParser(location);
 	}
 	
+	
 }
