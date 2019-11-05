@@ -7,7 +7,6 @@ import kosta.mvc.model.dto.DustDTO;
 import kosta.mvc.model.dto.WeatherDTO;
 
 public interface Weather {
-
 	List<DustDTO> dustSearch(String location) throws Exception;
 
 	List<WeatherDTO> weatherSearch(String location) throws Exception;
