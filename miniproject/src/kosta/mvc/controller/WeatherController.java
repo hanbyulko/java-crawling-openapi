@@ -9,14 +9,6 @@ import kosta.mvc.view.SuccessView;
 public class WeatherController {
 	private static Weather service = new WeatherServiceImpl();
 
-	public static void searchAll() {
-		try {
-			SuccessView.printAll(service.searchAll());
-		} catch (Exception e) {
-			FailView.errorMessage(e.getMessage());
-		}
-	}
-
 	public static void dustSearch(String location) {
 		try {
 			SuccessView.selectPrint(service.dustSearch(LocationCode.getCode(location)));
@@ -24,7 +16,7 @@ public class WeatherController {
 			FailView.errorMessage(e.getMessage());
 		}
 	}
-	
+
 	public static void weatherSearch(String location) {
 		try {
 			SuccessView.selectPrint(service.weatherSearch(LocationCode.getCode(location)));

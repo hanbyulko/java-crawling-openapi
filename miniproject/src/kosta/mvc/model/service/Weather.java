@@ -8,8 +8,6 @@ import kosta.mvc.model.dto.WeatherDTO;
 
 public interface Weather {
 
-	Map<List<DustDTO>, List<WeatherDTO>> searchAll( ) throws Exception;
-
 	List<DustDTO> dustSearch(String location) throws Exception;
 
 	List<WeatherDTO> weatherSearch(String location) throws Exception;

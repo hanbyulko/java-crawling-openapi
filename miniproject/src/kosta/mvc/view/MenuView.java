@@ -15,15 +15,11 @@ public class MenuView {
 	public static void menuPrint() {
 		while (true) {
 			System.out.println("-----메뉴 선택-----");
-			System.out.println("1. 전체 검색    2. 지역 검색     3. 종료");
+			System.out.println("1. 지역 검색     2. 종료");
 			String select = sc.next();
 
 			switch (select) {
 			case "1":
-				WeatherController.searchAll();
-				CommentController.selectAll();
-				break;
-			case "2":
 				System.out.println("지역을 입력하세요");
 				String location = sc.next();
 				WeatherController.dustSearch(location);
