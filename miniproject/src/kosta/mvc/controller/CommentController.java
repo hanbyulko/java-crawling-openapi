@@ -22,7 +22,11 @@ public class CommentController {
 	}
 
 	public static void insert(CommentDTO c) {
-
+		try {
+			service.insert(c);
+		} catch (SQLException e) {
+			FailView.errorMessage(e.getMessage());
+		}
 	}
 
 	public static void update(CommentDTO c) {

@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import kosta.mvc.model.dto.CommentDTO;
+import kosta.mvc.model.util.DBUtil;
 import kosta.mvc.model.util.DbUtil;
 
 public class CommentDAOImpl implements CommentDAO{
@@ -37,8 +38,22 @@ public class CommentDAOImpl implements CommentDAO{
 
 	@Override
 	public int insert(CommentDTO c) throws SQLException {
-		// TODO Auto-generated method stub
-		return 0;
+		Connection conn = null;
+		PreparedStatement ps = null;
+		int result = 0;
+		String sql = "insert into comments(id,content,location,regdate) values(?,?,?,?)";
+		try {
+			conn = DbUtil.getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, c.getWriter());
+			ps.setString(2, c.getContent());
+			ps.setString(3, c.getLocation());
+			ps.setString(4, c.getDate());
+			result = ps.executeUpdate();
+		}finally {
+			DbUtil.dbClose(conn, ps);
+		}
+		return result;
 	}
 
 	@Override

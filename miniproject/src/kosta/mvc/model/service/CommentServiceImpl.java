@@ -21,8 +21,10 @@ public class CommentServiceImpl implements CommentService {
 
 	@Override
 	public void insert(CommentDTO c) throws SQLException {
-		// TODO Auto-generated method stub
-		
+		int result = dao.insert(c);
+		if(result == 0) {
+			throw new SQLException("»ðÀÔ½ÇÆÐ");
+		}
 	}
 
 	@Override
