@@ -11,7 +11,6 @@ public class CommentDTO {
 		this.content = content;
 		this.location = location;
 		this.date = date;
-		
 	}
 	public CommentDTO() {
 		super();
