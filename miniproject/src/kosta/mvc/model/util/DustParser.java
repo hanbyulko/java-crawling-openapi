@@ -76,4 +76,8 @@ public class DustParser {
 		}
 		return dustList;
 	}
+	public static void main(String[] args) {
+		
+		System.out.println(jsonParser(""));
+	}
 }
