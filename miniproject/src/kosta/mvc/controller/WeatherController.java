@@ -17,7 +17,7 @@ public class WeatherController {
 		}
 	}
 
-	public static void weatherSearch(String date, String location) {
+	public static void weatherSearch(String location) {
 		try {
 			WeatherDTO weather = service.weatherSearch(location);
 			if (weather!=null) {

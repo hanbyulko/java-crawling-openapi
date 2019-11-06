@@ -23,7 +23,7 @@ public class MenuView {
 			case "1":
 				System.out.println("지역을 입력하세요");
 				location = sc.next();
-				WeatherController.weatherSearch(location, new SimpleDateFormat("yyyyMMdd", Locale.KOREA).format(new Date()));
+				WeatherController.weatherSearch(location);
 				commentMenu(location);
 				break;
 			case "2":
