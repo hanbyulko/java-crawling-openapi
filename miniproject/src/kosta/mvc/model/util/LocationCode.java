@@ -83,8 +83,6 @@ public class LocationCode {
 			return new Point(62, 125);
 		if (location.equals("°­µ¿±¸"))
 			return new Point(63, 126);
-		return null;
-
-		
+		return null;		
 	}
 }

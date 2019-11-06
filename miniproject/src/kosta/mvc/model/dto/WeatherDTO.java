@@ -1,6 +1,12 @@
 package kosta.mvc.model.dto;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class WeatherDTO {
+	private String weatherDate = new SimpleDateFormat("yyyy.MM.dd HH:mm:ss", Locale.KOREA).format(new Date());
+	private String location;
 	private String POP; // 강수확률
 	private String PTY; // 강수형태
 	private String R06; // 6시간 강수량
@@ -25,10 +31,22 @@ public class WeatherDTO {
 		UUU = uUU;
 		VEC = vEC;
 	}
+	
+	
+	public String getLocation() {
+		return location;
+	}
+	public void setLocation(String location) {
+		this.location = location;
+	}
+
+
 	@Override
 	public String toString() {
-		return "WeatherDTO [POP=" + POP + ", PTY=" + PTY + ", R06=" + R06 + ", REH=" + REH + ", S06=" + S06 + ", SKY="
-				+ SKY + ", T3H=" + T3H + ", TMN=" + TMN + ", UUU=" + UUU + ", VEC=" + VEC + "]";
+		return weatherDate.substring(0,4)+"년 "+weatherDate.substring(4, 6)+"월 "+weatherDate.substring(6,8)+"일 "+weatherDate.substring(8,10) + "시 " + weatherDate.substring(10, 12) +
+				"분 현재 ["+location +"]의 대기환경 상태는\n" + "강수확률 :"+ POP + "\n강수형태 :"+PTY+
+				"\n6시간 강수량 :" + R06 +"\n습도 :"+REH + "\n6시간 신적설 :"+S06 + 
+				"\n하늘상태 :" + SKY + "\n3시간 기온" + T3H + "\n일최저기온" +TMN + "\n풍속(동서성분)" +UUU 
+				+ "\n풍향" +VEC;
 	}
-	
 }
