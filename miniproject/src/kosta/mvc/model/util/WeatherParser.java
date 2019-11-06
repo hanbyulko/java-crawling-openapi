@@ -33,21 +33,16 @@ public class WeatherParser {
 			String result = ""; // 날씨 정보를 받아옵니다.
 			bf = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
 			
-			
 			while ((line = bf.readLine()) != null) {
 				result = result.concat(line); 	
 			}
 			JSONParser parser = new JSONParser();
-			
 			JSONObject obj = (JSONObject) parser.parse(result);
 			JSONObject parse_response = (JSONObject) obj.get("response");
 			JSONObject parse_body = (JSONObject) parse_response.get("body");
 			JSONObject parse_items = (JSONObject) parse_body.get("items");
 			JSONArray parse_item = (JSONArray) parse_items.get("item");
 			JSONObject weather; 
-			
-//			System.out.println(parse_item);
-			
 			int size = parse_item.size();
 			String[] arr = new String[size];
 			for (int i = 0; i < size; i++) {
@@ -66,9 +61,4 @@ public class WeatherParser {
 		}
 		return null;
 	}
-	
-	public static void main(String[] args) {
-//		System.out.println(WeatherParser.jsonParser(new Point(60,127)));
-	}
-	
 }

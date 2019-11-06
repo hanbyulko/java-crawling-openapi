@@ -21,19 +21,14 @@ public class DbUtil {
 	 * 로드
 	 */
 	static {
-		// 2개의 ~.properties 파일 로딩
 		try {  //
-
-
 			proFile.load(new FileInputStream(new File(GetPath.dbPath)));
-
 			Class.forName(proFile.getProperty("driverName"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}// 보통 로드는 스태틱 블록안에서함
-
+	}
 	/**
 	 * 연결
 	 * 
@@ -43,16 +38,12 @@ public class DbUtil {
 		return DriverManager.getConnection(proFile.getProperty("url"), proFile.getProperty("userName"),
 				proFile.getProperty("userPass"));
 	}
-	// 인스턴스멤버가 들어있는게 아니라서 스태틱메소드로 만들어도됨
-
 	/**
 	 * 닫기 (DB관련 사용된 객체들을 Close()한다)
 	 * 
 	 * @throws IOException
 	 * @throws SQLException
 	 */
-	// INSERT UPDATE DELETE인 경우
-	// SELECT인경우 2가지로 구분해서 메소드 오버로딩
 	public static void dbClose(Connection con, Statement stmt) {
 		try {
 			if (stmt != null)
@@ -85,9 +76,4 @@ public class DbUtil {
 	public static void main(String[] args) {
 		System.out.println(111);
 	}
-
-//	public static void close(AutoCloseable ... c) {
-//		c.close();
-//	}
-//AutoCloseable인애들은 이렇게 처리안하고 try-catch-resource문으로 처리함
 }

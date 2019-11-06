@@ -15,16 +15,12 @@ public class LocationCode {
 	 * 로드
 	 */
 	static {
-		// 2개의 ~.properties 파일 로딩
 		try {
-
 			proFile.load(new FileInputStream(new File(GetPath.lcPath)));
-
-
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-	}// 보통 로드는 스태틱 블록안에서함
+	}
 
 	public static String getCode(String location) throws Exception {
 		String code = (String) proFile.get(location);
@@ -111,6 +107,5 @@ public class LocationCode {
 			return new Point(61,125);
 		}
 		throw new Exception("서비스가 불가능한 지역입니다");
-
 	}
 }
