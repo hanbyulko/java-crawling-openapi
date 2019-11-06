@@ -51,14 +51,14 @@ public class JsoupParser {
 		int endIndex = cnt;
 		for (int i=0; i<lineSeperate; i++) {
 			if (i==lineSeperate-1) {
-				tmp += text.substring(beginIndex)+"\r\n";
+				tmp += text.substring(beginIndex)+System.lineSeparator();
 				break;
 			}
-			tmp += text.substring(beginIndex, endIndex)+"\r\n";
+			tmp += text.substring(beginIndex, endIndex)+System.lineSeparator();
 			beginIndex+=cnt;
 			endIndex+=cnt;
 		}
-		return tmp;
+		return tmp.replace(" ", "  ");
 	}
 
 	public static void main(String[] args) {
