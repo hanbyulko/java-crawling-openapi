@@ -40,51 +40,49 @@ public class LocationCode {
 		if (location.equals("중구"))
 			return new Point(60, 127);
 		if (location.equals("용산구"))
-			return new Point(60, 127);
+			return new Point(60, 126);
 		if (location.equals("성동구"))
-			return new Point(60, 127);
+			return new Point(61, 126);
 		if (location.equals("광진구"))
-			return new Point(60, 127);
+			return new Point(62, 127);
 		if (location.equals("동대문구"))
-			return new Point(60, 127);
+			return new Point(61, 127);
 		if (location.equals("중랑구"))
-			return new Point(60, 127);
+			return new Point(62, 127);
 		if (location.equals("성북구"))
-			return new Point(60, 127);
+			return new Point(61, 128);
 		if (location.equals("강북구"))
-			return new Point(60, 127);
+			return new Point(61, 128);
 		if (location.equals("도봉구"))
-			return new Point(60, 127);
+			return new Point(61, 129);
 		if (location.equals("노원구"))
-			return new Point(60, 127);
+			return new Point(61, 129);
 		if (location.equals("은평구"))
-			return new Point(60, 127);
+			return new Point(59, 128);
 		if (location.equals("서대문구"))
-			return new Point(60, 127);
+			return new Point(59, 127);
 		if (location.equals("마포구"))
-			return new Point(60, 127);
+			return new Point(59, 126);
 		if (location.equals("양천구"))
-			return new Point(60, 127);
+			return new Point(58, 126);
 		if (location.equals("강서구"))
-			return new Point(60, 127);
+			return new Point(58, 126);
 		if (location.equals("구로구"))
-			return new Point(60, 127);
+			return new Point(58,125);
 		if (location.equals("금천구"))
-			return new Point(60, 127);
+			return new Point(59,124);
 		if (location.equals("영등포구"))
-			return new Point(60, 127);
+			return new Point(59, 125);
 		if (location.equals("동작구"))
-			return new Point(60, 127);
+			return new Point(59, 125);
 		if (location.equals("관악구"))
-			return new Point(60, 127);
+			return new Point(59, 125);
 		if (location.equals("서초구"))
-			return new Point(60, 127);
+			return new Point(60, 125);
 		if (location.equals("송파구"))
-			return new Point(60, 127);
+			return new Point(62, 125);
 		if (location.equals("강동구"))
-			return new Point(60, 127);
-		if (location.equals("중구"))
-			return new Point(60, 127);
+			return new Point(63, 126);
 		return null;
 
 	}
