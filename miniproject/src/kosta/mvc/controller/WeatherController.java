@@ -23,6 +23,7 @@ public class WeatherController {
 			if (weather!=null) {
 				SuccessView.selectPrint(weather);
 			}
+			
 		} catch (Exception e) {
 			FailView.errorMessage(e.getMessage());
 		}
