@@ -107,6 +107,9 @@ public class LocationCode {
 		if (location.equals("강동구")) {
 			return new Point(63, 126);
 		}
+		if (location.equals("강남구")) {
+			return new Point(61,125);
+		}
 		return null;
 
 	}
