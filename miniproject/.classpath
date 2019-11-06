@@ -4,5 +4,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="C:/Users/kosta/Downloads/json-simple-1.1.1"/>
 	<classpathentry kind="lib" path="C:/Users/kosta/Downloads/ojdbc6 (1).jar"/>
+	<classpathentry kind="lib" path="C:/Users/kosta/Downloads/jsoup-1.12.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
