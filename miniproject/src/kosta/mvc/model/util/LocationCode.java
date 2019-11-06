@@ -106,12 +106,8 @@ public class LocationCode {
 		}
 		if (location.equals("°­µ¿±¸")) {
 			return new Point(63, 126);
-<<<<<<< HEAD
-		return null;		
-=======
+	
 		}
 		return null;
-
->>>>>>> branch 'master' of https://github.com/wo2306/miniproject.git
 	}
 }
