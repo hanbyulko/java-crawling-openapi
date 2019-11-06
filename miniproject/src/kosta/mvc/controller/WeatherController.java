@@ -1,5 +1,8 @@
 package kosta.mvc.controller;
 
+import java.util.Map;
+
+import kosta.mvc.model.dto.Article;
 import kosta.mvc.model.dto.WeatherDTO;
 import kosta.mvc.model.service.WeatherService;
 import kosta.mvc.model.service.WeatherServiceImpl;
@@ -25,9 +28,21 @@ public class WeatherController {
 		}
 	}
 	
-	public static void articleSearch() {
+	public static Map<Integer, Article> articleSearch() {
+		Map<Integer, Article> map = null;
 		try {
-			SuccessView.selectPrint(service.articleSearch());
+			map = service.articleSearch();
+			SuccessView.printArticle(map);
+		} catch (Exception e) {
+			FailView.errorMessage(e.getMessage());
+		}
+		return map;
+	}
+	
+	public static void articleContent(String link) {
+		Map<Integer, Article> map = null;
+		try {
+			SuccessView.selectPrint(service.articleContent(link));
 		} catch (Exception e) {
 			FailView.errorMessage(e.getMessage());
 		}

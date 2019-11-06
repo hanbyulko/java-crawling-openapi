@@ -11,6 +11,7 @@ import kosta.mvc.model.util.LocationCode;
 import kosta.mvc.model.util.WeatherParser;
 
 public class WeatherServiceImpl implements WeatherService {
+	static Map<Integer, Article> map;
 
 	@Override
 	public DustDTO dustSearch(String location) throws Exception {
@@ -36,6 +37,10 @@ public class WeatherServiceImpl implements WeatherService {
 		return JsoupParser.jsoupParser();
 	}
 	
+	@Override
+	public String articleContent(String link) throws Exception {
+		return JsoupParser.getContent(link);
+	}
 	
 
 }

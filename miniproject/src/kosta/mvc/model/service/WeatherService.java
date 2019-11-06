@@ -12,4 +12,6 @@ public interface WeatherService {
 	WeatherDTO weatherSearch(String location) throws Exception;
 
 	Map<Integer, Article> articleSearch() throws Exception;
+
+	String articleContent(String link) throws Exception;
 }
