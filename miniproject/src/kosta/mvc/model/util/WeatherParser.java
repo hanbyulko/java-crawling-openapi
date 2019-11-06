@@ -23,8 +23,7 @@ public class WeatherParser {
 	
 	public static WeatherDTO jsonParser(Point p) {
 		String date;
-		date = "20191106";
-//		date = new SimpleDateFormat("yyyyMMdd", Locale.KOREA).format(new Date());
+		date = new SimpleDateFormat("yyyyMMdd", Locale.KOREA).format(new Date());
 		BufferedReader bf = null;
 		try { 
 			String urlStr = "http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?serviceKey=" + WEATHER_KEY

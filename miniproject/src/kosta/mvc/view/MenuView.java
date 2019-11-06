@@ -34,6 +34,7 @@ public class MenuView {
 				break;
 			case "3":
 				sc.close();
+				System.out.println("프로그램을 종료합니다");
 				System.exit(0);
 			}
 		}
@@ -42,6 +43,7 @@ public class MenuView {
 	public static void commentMenu(String location) {
 		String select = null;
 		while (true) {
+			System.out.println("-----이웃이 남긴 댓글리스트-----");
 			CommentController.selectLoction(location);
 			System.out.println("1. 댓글 작성  2. 댓글 수정   3. 댓글 삭제   4. 이전 메뉴로");
 			select = sc.next();
