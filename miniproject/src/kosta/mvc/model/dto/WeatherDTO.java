@@ -89,6 +89,7 @@ public class WeatherDTO {
 		S06 = s06;
 	}
 
+	
 	public String getSKY() {
 		return SKY;
 	}
