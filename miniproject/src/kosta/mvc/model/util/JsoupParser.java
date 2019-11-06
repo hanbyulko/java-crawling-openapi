@@ -17,7 +17,8 @@ public class JsoupParser {
 	 * 클래스 : Element가 모인 자료형
 	 */
 	public static Map<Integer, Article>jsoupParser() {
-		String url = "http://www.hani.co.kr/arti/ISSUE/180/list1.html";
+		String link = "arti/ISSUE/180/list1.html";
+		String url = "http://www.hani.co.kr/"+ link;
 		Document doc = null;
 		try {
 			doc = Jsoup.connect(url).get();
@@ -33,14 +34,12 @@ public class JsoupParser {
 		int num = 1;
 		
 		for (Element el : elements) {
-			map.put(num++, new Article(el.select("h4").text(), ""));
+			map.put(num++, new Article(el.select("h4").text(),el.select("a").attr("href")));
 		}
-//		String title = elements.select("h4").html();
-//		System.out.println(element.first().attr("abs:a href"));
-//		System.out.println("============================================================");
-//		System.out.println(title);
-//		System.out.println("============================================================");
 		return map;
-//		System.out.println("============================================================");
+	}
+	
+	public static void main(String[] args) {
+		JsoupParser.jsoupParser();
 	}
 }
