@@ -69,6 +69,7 @@ public class WeatherParser {
 	}
 	
 	public static void main(String[] args) {
+//		System.out.println(WeatherParser.jsonParser(new Point(60,127)));
 	}
 	
 }
