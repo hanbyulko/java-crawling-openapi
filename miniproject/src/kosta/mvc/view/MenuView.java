@@ -80,14 +80,15 @@ public class MenuView {
 			case "1":
 				System.out.println("아이디 입력");
 				id = br.readLine();
-
-				if (CommentController.getCheckById(id)) {
-					FailView.errorMessage(id + "는 중복입니다 다시 입력해주세요.");
-					id = br.readLine();
-				} else {
-					SuccessView.messagePrint(id + "는 사용가능합니다.");
+				while (true) {
+					if (CommentController.getCheckById(id)) {
+						FailView.errorMessage(id + "는 중복입니다 다시 입력해주세요.");
+						id = br.readLine();
+					} else {
+						SuccessView.messagePrint(id + "는 사용가능합니다.");
+						break;
+					}
 				}
-
 				System.out.println("내용 입력");
 				content = br.readLine();
 				CommentController.insert(new CommentDTO(id, content, location,
