@@ -1,133 +1,170 @@
 package kosta.mvc.model.dto;
 
 public class WeatherDTO {
-	private String obsTm; //관측일자
-	private String nm;  //지점명 
-	private String taAvg; //평균기온
-	private String taMin; //최저기온
-	private String taMax; //최고기온
-	private String hdAvg; //평균습도
-	private String hdMin; //최저습도
-	private String hdMax; //최고습도
-	private String wsAvg; //평균풍속
-	private String wsMax; //최대풍속
-	private String rnSum; //강수량
-	
+	private String PubDate;//날짜??!!
+	private String nm;//관측지역??!!
+	private String POP; // 강수확률
+	private String PTY; // 강수형태
+	private String R06; // 6시간 강수량
+	private String REH; // 습도
+	private String S06; // 6시간 신적설
+	private String SKY; // 하늘상태
+	private String T3H; // 3시간 기온
+	private String TMN; // 일최저기온
+	private String TMX; // 일최고기온
+	private String UUU; // 풍속(동서성분)
+	private String VVV; // 풍속(남북성분)
+	private String WAV; // 파고
+	private String VEC; // 풍향
+	private String WSD; // 풍속
+
 	public WeatherDTO() {
-		
 	}
 
-	public WeatherDTO(String obsTm, String nm, String taAvg, String taMin, String taMax, String hdAvg, String hdMin,
-			String hdMax, String wsAvg, String wsMax, String rnSum) {
+	public WeatherDTO(String pubDate,String pOP, String pTY, String r06, String rEH, String s06, String sKY, String t3h, String tMN,
+			String tMX, String uUU, String vVV, String wAV, String vEC, String wSD) {
 		super();
-		this.obsTm = obsTm;
-		this.nm = nm;
-		this.taAvg = taAvg;
-		this.taMin = taMin;
-		this.taMax = taMax;
-		this.hdAvg = hdAvg;
-		this.hdMin = hdMin;
-		this.hdMax = hdMax;
-		this.wsAvg = wsAvg;
-		this.wsMax = wsMax;
-		this.rnSum = rnSum;
-	}
-	
-	
-
-	public String getObsTm() {
-		return obsTm;
+		PubDate = pubDate;
+		POP = pOP;
+		PTY = pTY;
+		R06 = r06;
+		REH = rEH;
+		S06 = s06;
+		SKY = sKY;
+		T3H = t3h;
+		TMN = tMN;
+		TMX = tMX;
+		UUU = uUU;
+		VVV = vVV;
+		WAV = wAV;
+		VEC = vEC;
+		WSD = wSD;
 	}
 
-	public void setObsTm(String obsTm) {
-		this.obsTm = obsTm;
+	public String getPubDate() {
+		return PubDate;
 	}
 
-	public String getNm() {
-		return nm;
+	public void setPubDate(String pubDate) {
+		PubDate = pubDate;
 	}
 
-	public void setNm(String nm) {
-		this.nm = nm;
+	public String getPOP() {
+		return POP;
 	}
 
-	public String getTaAvg() {
-		return taAvg;
+	public void setPOP(String pOP) {
+		POP = pOP;
 	}
 
-	public void setTaAvg(String taAvg) {
-		this.taAvg = taAvg;
+	public String getPTY() {
+		return PTY;
 	}
 
-	public String getTaMin() {
-		return taMin;
+	public void setPTY(String pTY) {
+		PTY = pTY;
 	}
 
-	public void setTaMin(String taMin) {
-		this.taMin = taMin;
+	public String getR06() {
+		return R06;
 	}
 
-	public String getTaMax() {
-		return taMax;
+	public void setR06(String r06) {
+		R06 = r06;
 	}
 
-	public void setTaMax(String taMax) {
-		this.taMax = taMax;
+	public String getREH() {
+		return REH;
 	}
 
-	public String getHdAvg() {
-		return hdAvg;
+	public void setREH(String rEH) {
+		REH = rEH;
 	}
 
-	public void setHdAvg(String hdAvg) {
-		this.hdAvg = hdAvg;
+	public String getS06() {
+		return S06;
 	}
 
-	public String getHdMin() {
-		return hdMin;
+	public void setS06(String s06) {
+		S06 = s06;
 	}
 
-	public void setHdMin(String hdMin) {
-		this.hdMin = hdMin;
+	public String getSKY() {
+		return SKY;
 	}
 
-	public String getHdMax() {
-		return hdMax;
+	public void setSKY(String sKY) {
+		SKY = sKY;
 	}
 
-	public void setHdMax(String hdMax) {
-		this.hdMax = hdMax;
+	public String getT3H() {
+		return T3H;
 	}
 
-	public String getWsAvg() {
-		return wsAvg;
+	public void setT3H(String t3h) {
+		T3H = t3h;
 	}
 
-	public void setWsAvg(String wsAvg) {
-		this.wsAvg = wsAvg;
+	public String getTMN() {
+		return TMN;
 	}
 
-	public String getWsMax() {
-		return wsMax;
+	public void setTMN(String tMN) {
+		TMN = tMN;
 	}
 
-	public void setWsMax(String wsMax) {
-		this.wsMax = wsMax;
+	public String getTMX() {
+		return TMX;
 	}
 
-	public String getRnSum() {
-		return rnSum;
+	public void setTMX(String tMX) {
+		TMX = tMX;
 	}
 
-	public void setRnSum(String rnSum) {
-		this.rnSum = rnSum;
+	public String getUUU() {
+		return UUU;
+	}
+
+	public void setUUU(String uUU) {
+		UUU = uUU;
+	}
+
+	public String getVVV() {
+		return VVV;
+	}
+
+	public void setVVV(String vVV) {
+		VVV = vVV;
+	}
+
+	public String getWAV() {
+		return WAV;
+	}
+
+	public void setWAV(String wAV) {
+		WAV = wAV;
+	}
+
+	public String getVEC() {
+		return VEC;
+	}
+
+	public void setVEC(String vEC) {
+		VEC = vEC;
+	}
+
+	public String getWSD() {
+		return WSD;
+	}
+
+	public void setWSD(String wSD) {
+		WSD = wSD;
 	}
 
 	@Override
 	public String toString() {
-		return obsTm.substring(0,4)+"년 "+obsTm.substring(4, 6)+"월 "+obsTm.substring(6,8)+"일 ["+ nm + "]의 날씨 정보" +
-				"\n평균기온 :"+ taAvg + "\n최저기온 :"+taMin+
-				"\n최고기온 :" + taMax +"\n평균습도 :"+hdAvg + "\n최저습도 :"+hdMin + 
-				"\n최고습도 :" + hdMax + "\n평균풍속" + wsAvg + "\n최대풍속" +wsMax + "\n강수량" + rnSum;
+		return PubDate.substring(0, 4) + "년 " + PubDate.substring(4, 6) + "월 " + PubDate.substring(6, 8) + "일 [" + nm
+				+ "]의 날씨 정보" + "\n평균기온 :" + taAvg + "\n최저기온 :" + taMin + "\n최고기온 :" + taMax + "\n평균습도 :" + hdAvg
+				+ "\n최저습도 :" + hdMin + "\n최고습도 :" + hdMax + "\n평균풍속" + wsAvg + "\n최대풍속" + wsMax + "\n강수량" + rnSum;
 	}
 }
