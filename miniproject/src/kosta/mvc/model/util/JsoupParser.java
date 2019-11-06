@@ -27,12 +27,14 @@ public class JsoupParser {
 //		// 1. 헤더 부분의 제목을 가져온다.
 		String title = element.select("h4").html();
 		System.out.println(title);
+		
 //		System.out.println("============================================================");
 //		System.out.println(title);
 //		System.out.println("============================================================");
-//		for (Element el : element.select("li")) { // 하위 뉴스 기사들을 for문 돌면서 출력
-//			System.out.println(el.text());
-//		}
+		for (Element el : element.select("a href")) { // 하위 뉴스 기사들을 for문 돌면서 출력
+			System.out.println(el.text());
+		}
+		
 //		System.out.println("============================================================");
 	}
 }
