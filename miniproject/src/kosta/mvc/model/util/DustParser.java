@@ -25,23 +25,20 @@ public class DustParser {
 
 			String line = "";
 			String result = "";
-			bf = new BufferedReader(new InputStreamReader(url.openStream()));
+			bf = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
 			while ((line = bf.readLine()) != null) {
 				result = result.concat(line); //
 			}
-			
 			JSONParser parser = new JSONParser();
 			JSONObject obj = (JSONObject) parser.parse(result);
 			JSONObject parse_response = (JSONObject) obj.get("ListAirQualityByDistrictService");
-			System.out.println(parse_response);
 			JSONArray parse_item = (JSONArray) parse_response.get("row");
-			System.out.println(parse_item);
 			JSONObject list; 
 			for (int i = 0; i < parse_item.size(); i++) {
 				list = (JSONObject) parse_item.get(i);
 				String msrDate = (String) list.get("MSRDATE"); 
 				String msrAdmCode = (String) list.get("MSRADMCODE");
-				String msrStenName = (String) list.get("MSRSTENNAME");
+				String msrStenName = (String) list.get("MSRSTENAME");
 				String maxIndex = (String) list.get("MAXINDEX");
 				String grade = (String) list.get("GRADE");
 				String pollutant = (String) list.get("POLLUTANT");
@@ -55,7 +52,7 @@ public class DustParser {
 						carbon, sulfurous, pm10, pm25);
 			}
 		} catch (Exception e) {
-			System.out.println(e.getMessage());
+			e.printStackTrace();
 		} finally {
 			try {
 				bf.close();

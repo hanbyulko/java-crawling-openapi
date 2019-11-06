@@ -1,11 +1,8 @@
 package kosta.mvc.model.service;
 
-import java.awt.Point;
-
 import kosta.mvc.model.dto.DustDTO;
 import kosta.mvc.model.dto.WeatherDTO;
 import kosta.mvc.model.util.DustParser;
-import kosta.mvc.model.util.Earth;
 import kosta.mvc.model.util.LocationCode;
 import kosta.mvc.model.util.WeatherParser;
 

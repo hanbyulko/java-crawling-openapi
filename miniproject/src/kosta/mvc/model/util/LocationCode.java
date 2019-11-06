@@ -10,15 +10,15 @@ public class LocationCode {
 	/**
 	 * DB연동을 위한 로드, 연결, 실행
 	 */
-
+	
 	/**
 	 * 로드
 	 */
 	static {
 		// 2개의 ~.properties 파일 로딩
 		try {
+			proFile.load(new FileInputStream(new File("src/kosta/mvc/model/util/dbInfo.properties")));
 			proFile.load(new FileInputStream(new File("src/kosta/mvc/model/util/locationInfo.properties")));
-
 			Class.forName(proFile.getProperty("driverName"));
 
 		} catch (Exception e) {
@@ -27,7 +27,7 @@ public class LocationCode {
 	}// 보통 로드는 스태틱 블록안에서함
 
 	public static String getCode(String location) throws Exception {
-		String code = proFile.getProperty(location);
+		String code = (String)proFile.get(location);
 		if (code == null) {
 			throw new Exception("서비스가 불가능한 지역입니다");
 		}

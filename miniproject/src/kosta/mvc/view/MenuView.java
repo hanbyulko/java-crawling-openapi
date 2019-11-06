@@ -24,16 +24,18 @@ public class MenuView {
 				System.out.println("지역을 입력하세요");
 				location = sc.next();
 				WeatherController.weatherSearch(location, new SimpleDateFormat("yyyyMMdd", Locale.KOREA).format(new Date()));
+				commentMenu(location);
+				break;
 			case "2":
 				System.out.println("지역을 입력하세요");
 				location = sc.next();
 				WeatherController.dustSearch(location);
+				commentMenu(location);
 				break;
 			case "3":
 				sc.close();
 				System.exit(0);
 			}
-			commentMenu(location);
 		}
 	}
 	

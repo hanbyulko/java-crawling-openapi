@@ -3,7 +3,7 @@ package kosta.mvc.model.dto;
 public class DustDTO {
 	private String msrDate; //측정날짜
 	private String msRadmCode; //측정소 행정코드
-	private String msrStenName; //측정소명
+	private String msrSteName; //측정소명
 	private String maxIndex; //통합대기환경지수
 	private String grade; //통합대기환경지수등급
 	private String pollutant; //지수결정물질
@@ -26,10 +26,10 @@ public class DustDTO {
 		this.msRadmCode = msRadmCode;
 	}
 	public String getMsrStenName() {
-		return msrStenName;
+		return msrSteName;
 	}
 	public void setMsrStenName(String msrStenName) {
-		this.msrStenName = msrStenName;
+		this.msrSteName = msrStenName;
 	}
 	public String getMaxIndex() {
 		return maxIndex;
@@ -92,7 +92,7 @@ public class DustDTO {
 		super();
 		this.msrDate = msrDate;
 		this.msRadmCode = msRadmCode;
-		this.msrStenName = msrStenName;
+		this.msrSteName = msrStenName;
 		this.maxIndex = maxIndex;
 		this.grade = grade;
 		this.pollutant = pollutant;
@@ -105,7 +105,7 @@ public class DustDTO {
 	}
 	@Override
 	public String toString() {
-		return msrDate.substring(0,4)+"년 "+msrDate.substring(4, 6)+"월 "+msrDate.substring(6,8)+"일 "+msrDate.substring(8,10) + "시 " + msrDate.substring(10, 12) + "분 현재 ["+msrStenName +"]의 대기환경 상태는 ["
+		return msrDate.substring(0,4)+"년 "+msrDate.substring(4, 6)+"월 "+msrDate.substring(6,8)+"일 "+msrDate.substring(8,10) + "시 " + msrDate.substring(10, 12) + "분 현재 ["+msrSteName +"]의 대기환경 상태는 ["
 				+ grade + "]입니다\n" + "통합대기환경지수 :"+ maxIndex + "\n지수결정물질 :"+pollutant+
 				"\n이산화질소 :" + nitrogen +"\n오존 :"+ozone + "\n일산화탄소 :"+carbon + 
 				"\n아황산가스 :" + sulfurous + "\n미세먼지농도" + pm10 + "\n초미세먼지농도" +pm25;
