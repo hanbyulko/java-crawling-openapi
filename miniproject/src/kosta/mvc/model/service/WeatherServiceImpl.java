@@ -24,6 +24,7 @@ public class WeatherServiceImpl implements WeatherService {
 			throw new Exception("검색 데이터가 없습니다");
 		}
 		weather.setLocation(location);	
+
 		return weather;
 	}
 }
