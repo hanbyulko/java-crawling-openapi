@@ -1,8 +1,12 @@
 package kosta.mvc.model.service;
 
+import java.util.Map;
+
+import kosta.mvc.model.dto.Article;
 import kosta.mvc.model.dto.DustDTO;
 import kosta.mvc.model.dto.WeatherDTO;
 import kosta.mvc.model.util.DustParser;
+import kosta.mvc.model.util.JsoupParser;
 import kosta.mvc.model.util.LocationCode;
 import kosta.mvc.model.util.WeatherParser;
 
@@ -26,5 +30,12 @@ public class WeatherServiceImpl implements WeatherService {
 		weather.setLocation(location);
 		return weather;
 	}
+
+	@Override
+	public Map<Integer, Article> articleSearch() throws Exception {
+		return JsoupParser.jsoupParser();
+	}
+	
+	
 
 }

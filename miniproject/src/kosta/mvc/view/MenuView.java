@@ -17,7 +17,7 @@ public class MenuView {
 	public static void menuPrint() throws IOException {
 		while (true) {
 			System.out.println("-----메뉴 선택-----");
-			System.out.println("1. 실시간 날씨 정보     2. 실시간 대기환경 정보     3. 종료");
+			System.out.println("1. 실시간 날씨 정보     2. 실시간 대기환경 정보     3. 미세먼지 관련 뉴스     4. 종료");
 			String select = br.readLine();
 			String location = null;
 			
@@ -35,6 +35,9 @@ public class MenuView {
 				commentMenu(location);
 				break;
 			case "3":
+				WeatherController.articleSearch();
+				break;
+			case "4":
 				br.close();
 				System.out.println("프로그램을 종료합니다");
 				System.exit(0);

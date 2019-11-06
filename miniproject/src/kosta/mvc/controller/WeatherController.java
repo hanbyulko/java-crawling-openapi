@@ -24,4 +24,12 @@ public class WeatherController {
 			FailView.errorMessage(e.getMessage());
 		}
 	}
+	
+	public static void articleSearch() {
+		try {
+			SuccessView.selectPrint(service.articleSearch());
+		} catch (Exception e) {
+			FailView.errorMessage(e.getMessage());
+		}
+	}
 }
