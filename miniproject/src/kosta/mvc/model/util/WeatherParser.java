@@ -21,7 +21,10 @@ import kosta.mvc.model.dto.WeatherDTO;
 public class WeatherParser {
 	private static final String WEATHER_KEY = "yYWI7%2BtWL7LgU05faHaW8NN7nzNK22hbRhJ0KnbgaGer%2BLfu0j4RnX1PlqAvnyW0sDSotP59SWXAMvtiFJJ49A%3D%3D";
 	
-	public static WeatherDTO jsonParser(Point p, String date) {
+	public static WeatherDTO jsonParser(Point p) {
+		String date;
+		date = "20191106";
+//		date = new SimpleDateFormat("yyyyMMdd", Locale.KOREA).format(new Date());
 		BufferedReader bf = null;
 		try { 
 			String urlStr = "http://newsky2.kma.go.kr/service/SecndSrtpdFrcstInfoService2/ForecastSpaceData?serviceKey=" + WEATHER_KEY
@@ -34,30 +37,24 @@ public class WeatherParser {
 			while ((line = bf.readLine()) != null) {
 				result = result.concat(line); 	
 			}
-//			System.out.println(result);
-			
 			JSONParser parser = new JSONParser();
-			JSONObject obj = (JSONObject) parser.parse(result);
-			//System.out.println(obj);
 			
+			JSONObject obj = (JSONObject) parser.parse(result);
 			JSONObject parse_response = (JSONObject) obj.get("response");
 			JSONObject parse_body = (JSONObject) parse_response.get("body");
-			//System.out.println(parse_response);
-			
 			JSONObject parse_items = (JSONObject) parse_body.get("items");
-			
-			
 			JSONArray parse_item = (JSONArray) parse_items.get("item");
-			System.out.println(parse_item);
-			
 			JSONObject weather; 
+			
+//			System.out.println(parse_item);
+			
 			int size = parse_item.size();
 			String[] arr = new String[size];
-			for (int i = 0; i < parse_item.size(); i++) {
+			for (int i = 0; i < size; i++) {
 				weather = (JSONObject) parse_item.get(i);
 				arr[i] = String.valueOf(weather.get("fcstValue"));
 			}
-			return new WeatherDTO(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9], arr[10]);
+			return new WeatherDTO(arr[0], arr[1], arr[2], arr[3], arr[4], arr[5], arr[6], arr[7], arr[8], arr[9]);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}finally {
@@ -68,10 +65,6 @@ public class WeatherParser {
 			}
 		}
 		return null;
-	}
-	
-	public static void main(String[] args) {
-		jsonParser(new Point(60, 127), new SimpleDateFormat("yyyyMMdd", Locale.KOREA).format(new Date()));
 	}
 	
 }
