@@ -34,7 +34,7 @@ public class LocationCode {
 		return code;
 	}
 
-	public static Point getPoint(String location) {
+	public static Point getPoint(String location) throws Exception {
 		if (location.equals("종로구")) {
 			return new Point(60, 127);
 		}
@@ -110,7 +110,7 @@ public class LocationCode {
 		if (location.equals("강남구")) {
 			return new Point(61,125);
 		}
-		return null;
+		throw new Exception("서비스가 불가능한 지역입니다");
 
 	}
 }
