@@ -36,6 +36,26 @@ public class CommentDAOImpl implements CommentDAO{
 	}
 
 	@Override
+	public boolean getCheckById(String id) throws SQLException {//id 중복체크 true이면 중복, false이면 중복아님
+		Connection conn = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		String sql = "select id from comments where upper(id) = upper(?)";
+		boolean result = false;
+		try {
+			conn = DbUtil.getConnection();
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, id.trim());//trim권장(공백 없애기 위해)
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				result = true;
+			}
+		}finally {
+			DbUtil.dbClose(conn, ps, rs);
+		}return result;
+	}
+	
+	@Override
 	public int insert(CommentDTO c) throws SQLException {
 		Connection conn = null;
 		PreparedStatement ps = null;

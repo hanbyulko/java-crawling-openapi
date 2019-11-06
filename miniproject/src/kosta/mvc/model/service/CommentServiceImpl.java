@@ -20,6 +20,12 @@ public class CommentServiceImpl implements CommentService {
 	}
 
 	@Override
+	public boolean getCheckById(String id) throws SQLException {
+		return dao.getCheckById(id);
+	}
+
+	
+	@Override
 	public void insert(CommentDTO c) throws SQLException {
 		int result = dao.insert(c);
 		if(result == 0) {
@@ -44,6 +50,7 @@ public class CommentServiceImpl implements CommentService {
 		}
 	}
 
+	
 	
 
 }

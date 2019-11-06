@@ -9,6 +9,8 @@ public interface CommentDAO {
 	//최근 댓글 5개만 리턴
 	List<CommentDTO> selectLocation(String location) throws SQLException;
 	
+	public boolean getCheckById(String id) throws SQLException;
+	
 	int insert(CommentDTO c)throws SQLException;
 	
 	int update(CommentDTO c)throws SQLException;

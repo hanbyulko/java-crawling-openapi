@@ -21,6 +21,18 @@ public class CommentController {
 		}
 	}
 
+	//id중복체크
+	public static boolean getCheckById(String id) {
+		boolean result = true;
+		try {
+			 result = service.getCheckById(id);
+		}catch(SQLException e) {
+			//e.printStackTrace();
+			FailView.errorMessage(e.getMessage());
+		}
+		return result;
+	}
+	
 	public static void insert(CommentDTO c) {
 		try {
 			service.insert(c);
