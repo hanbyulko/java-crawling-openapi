@@ -18,7 +18,6 @@ public class LocationCode {
 		// 2개의 ~.properties 파일 로딩
 		try {
 			proFile.load(new FileInputStream(new File("src/kosta/mvc/model/util/locationInfo.properties")));
-			Class.forName(proFile.getProperty("driverName"));
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -105,6 +104,9 @@ public class LocationCode {
 		}
 		if (location.equals("강동구")) {
 			return new Point(63, 126);
+		}
+		if (location.equals("강남구")) {
+			return new Point(61,125);
 		}
 		return null;
 
