@@ -45,19 +45,20 @@ public class JsoupParser {
 			text += el.text();
 		}
 		String tmp = "";
-		int lineSeperate = text.length()/40+1;
+		int cnt = 40;
+		int lineSeperate = text.length()/cnt+1;
 		int beginIndex = 0;
-		int endIndex = 40;
+		int endIndex = cnt;
 		for (int i=0; i<lineSeperate; i++) {
 			if (i==lineSeperate-1) {
 				tmp += text.substring(beginIndex)+"\r\n";
 				break;
 			}
 			tmp += text.substring(beginIndex, endIndex)+"\r\n";
-			beginIndex+=40;
-			endIndex+=40;
+			beginIndex+=cnt;
+			endIndex+=cnt;
 		}
-		return tmp.replace(" ", "  ");
+		return tmp;
 	}
 
 	public static void main(String[] args) {
