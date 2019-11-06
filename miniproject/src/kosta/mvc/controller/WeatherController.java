@@ -19,7 +19,7 @@ public class WeatherController {
 
 	public static void weatherSearch(String date, String location) {
 		try {
-			WeatherDTO weather = service.weatherSearch(date, location);
+			WeatherDTO weather = service.weatherSearch(location);
 			if (weather!=null) {
 				SuccessView.selectPrint(weather);
 			}

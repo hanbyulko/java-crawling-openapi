@@ -33,7 +33,8 @@ public class WeatherParser {
 			String line = "";
 			String result = ""; // 날씨 정보를 받아옵니다.
 			bf = new BufferedReader(new InputStreamReader(url.openStream(), "UTF-8"));
-
+			
+			
 			while ((line = bf.readLine()) != null) {
 				result = result.concat(line); 	
 			}
@@ -65,6 +66,9 @@ public class WeatherParser {
 			}
 		}
 		return null;
+	}
+	
+	public static void main(String[] args) {
 	}
 	
 }
