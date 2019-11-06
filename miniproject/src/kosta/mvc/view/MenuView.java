@@ -29,13 +29,11 @@ public class MenuView {
 				System.out.println("지역을 입력하세요");
 				location = br.readLine();
 				WeatherController.weatherSearch(location);
-				commentMenu(location);
 				break;
 			case "2":
 				System.out.println("지역을 입력하세요");
 				location = br.readLine();
 				WeatherController.dustSearch(location);
-				commentMenu(location);
 				break;
 			case "3":
 				articleMenu();
