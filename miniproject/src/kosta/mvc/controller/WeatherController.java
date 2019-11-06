@@ -40,7 +40,6 @@ public class WeatherController {
 	}
 	
 	public static void articleContent(String link) {
-		Map<Integer, Article> map = null;
 		try {
 			SuccessView.selectPrint(service.articleContent(link));
 		} catch (Exception e) {
