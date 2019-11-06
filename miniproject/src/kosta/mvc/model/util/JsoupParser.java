@@ -57,7 +57,7 @@ public class JsoupParser {
 			beginIndex+=40;
 			endIndex+=40;
 		}
-		return tmp;
+		return tmp.replace(" ", "  ");
 	}
 
 	public static void main(String[] args) {
