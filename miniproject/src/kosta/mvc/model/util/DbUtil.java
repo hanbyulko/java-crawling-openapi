@@ -24,8 +24,7 @@ public class DbUtil {
 		// 2개의 ~.properties 파일 로딩
 		try {  //
 
-			proFile.load(new FileInputStream(new File("miniproject/src/kosta/mvc/model/util/dbInfo.properties")));
-			proFile.load(new FileInputStream(new File("miniproject/src/kosta/mvc/model/util/locationInfo.properties")));
+			proFile.load(new FileInputStream(new File("src/kosta/mvc/model/util/dbInfo.properties")));
 
 			Class.forName(proFile.getProperty("driverName"));
 
