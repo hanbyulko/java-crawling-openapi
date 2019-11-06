@@ -36,7 +36,7 @@ public class CommentDAOImpl implements CommentDAO{
 	}
 
 	@Override
-	public boolean getCheckById(String id) throws SQLException {//id 중복체크 true이면 중복, false이면 중복아님
+	public boolean getCheckById(String id) throws SQLException {//id 중복체크true이면 중복, false이면 중복아님
 		Connection conn = null;
 		PreparedStatement ps = null;
 		ResultSet rs = null;

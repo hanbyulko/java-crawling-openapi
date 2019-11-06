@@ -36,6 +36,7 @@ public class CommentController {
 	public static void insert(CommentDTO c) {
 		try {
 			service.insert(c);
+			SuccessView.messagePrint("삽입되었습니다.");
 		} catch (SQLException e) {
 			FailView.errorMessage(e.getMessage());
 		}
@@ -44,6 +45,7 @@ public class CommentController {
 	public static void update(CommentDTO c) {
 		try {
 			service.update(c);
+			SuccessView.messagePrint("수정되었습니다.");
 		} catch (SQLException e) {
 			FailView.errorMessage(e.getMessage());
 		}
@@ -52,6 +54,7 @@ public class CommentController {
 	public static void delete(String id) {
 		try {
 			service.delete(id);
+			SuccessView.messagePrint("삭제되었습니다.");
 		} catch (Exception e) { //SQLException하면 오류가 나는데 왜 나는지 모르겠습니다 ㅜㅜ
 			FailView.errorMessage(e.getMessage());
 		}

@@ -55,10 +55,10 @@ public class MenuView {
 				id = sc.next();
 				
 				if (CommentController.getCheckById(id)) {
-					System.out.println(id + "는 중복입니다 다시 입력해주세요.");
+					FailView.errorMessage(id + "는 중복입니다 다시 입력해주세요.");
 					id = sc.next();
 				} else {
-					System.out.println(id + "는 사용가능합니다.");
+					SuccessView.messagePrint(id + "는 사용가능합니다.");
 				}
 				
 				System.out.println("내용 입력");
