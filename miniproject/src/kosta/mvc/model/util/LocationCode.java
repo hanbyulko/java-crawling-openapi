@@ -17,7 +17,9 @@ public class LocationCode {
 	static {
 		// 2개의 ~.properties 파일 로딩
 		try {
+
 			proFile.load(new FileInputStream(new File(GetPath.lcPath)));
+
 
 		} catch (Exception e) {
 			e.printStackTrace();
