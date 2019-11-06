@@ -85,5 +85,6 @@ public class LocationCode {
 			return new Point(63, 126);
 		return null;
 
+		
 	}
 }
