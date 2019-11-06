@@ -25,6 +25,7 @@ public class WeatherController {
 			}
 			
 			
+			
 		} catch (Exception e) {
 			FailView.errorMessage(e.getMessage());
 		}
