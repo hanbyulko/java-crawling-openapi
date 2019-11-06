@@ -25,7 +25,7 @@ public class DbUtil {
 		try {  //
 
 			proFile.load(new FileInputStream(new File("src/kosta/mvc/model/util/dbInfo.properties")));
-			proFile.load(new FileInputStream(new File("src/kosta/mvc/model/util/locaitonInfo.properties")));
+			proFile.load(new FileInputStream(new File("src/kosta/mvc/model/util/locationInfo.properties")));
 
 			Class.forName(proFile.getProperty("driverName"));
 
