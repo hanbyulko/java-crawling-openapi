@@ -60,8 +60,4 @@ public class JsoupParser {
 		}
 		return tmp.replace(" ", "  ");
 	}
-
-	public static void main(String[] args) {
-		JsoupParser.jsoupParser();
-	}
 }
