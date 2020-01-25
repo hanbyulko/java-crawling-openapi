@@ -1,4 +1,4 @@
-# Java Console기반 미세먼지, 날씨 검색 어플리케이션 구현
+# Java 기반 미세먼지, 날씨 검색 어플리케이션 구현
 
   <br/>
 
@@ -38,7 +38,7 @@
  ![image](https://user-images.githubusercontent.com/49690751/73124360-e3c6cb80-3fdd-11ea-9310-385870da8ce0.png)
  >날씨 및 미세먼지 데이터 http request 및 결과 json값 라이브러리 이용해 파싱해 DB에 저장
  
-    <br/>
+  <br/>
  
  ***실시간 미세먼지 관련 기사 조회***
  ![image](https://user-images.githubusercontent.com/49690751/73124381-17095a80-3fde-11ea-9f5f-d229618d1932.png)
